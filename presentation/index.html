@@ -102,6 +102,47 @@
           </section>
 
           <section>
+            <h2>It's just text</h2>
+            <p>
+              HTML is a simple way to apply text-based markup to your content,
+              in order to apply a level of structural organization.
+            </p>
+          </section>
+
+          <section>
+            <h2>HTML tags</h2>
+            <p>An HTML tag is simply a small piece of text that surrounds content, with a specific format.</p>
+            <p>Most tags have an opening / closing tag pair</p>
+            <p><code>&lt;p&gt;Like this&lt;/p&gt;</code></p>
+            <p>HTML tags will be wrapped around everything in your document.</p>
+          </section>
+
+          <section>
+            <h2>Anatomy of a tag</h2>
+            <ul>
+              <li>An opening angle bracket ( &lt; ) followed by the tag name</li>
+              <li>One or more optional attributes</li>
+              <li>The closing angle bracket ( &gt; )</li>
+              <li>The contents of the tag</li>
+              <li>An opening angle bracket, followed by a forward slash, the name of the tag, and a closing angle bracket</li>
+            </ul>
+            <pre><code>
+              &lt;p class=&quot;content&quot;&gt; This is some content &lt;/p&gt;
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Anatomy of a page</h2>
+            <ul>
+              <li>A <code>doctype</code></li>
+              <li>The opening <code>&lt;html&gt;</code> tag</li>
+              <li>A <code>&lt;head&gt;</code> tag, containing information about the page</li>
+              <li>A <code>&lt;body&gt;</code> tag, holding the page's content</li>
+              <li>Usually (but not always) multiple tags in the body</li>
+            </ul>
+          </section>
+
+          <section>
             <h2>Simple HTML example</h2>
             <pre><code>
 &lt;!doctype html&gt;
@@ -112,18 +153,19 @@
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Welcome to my page!&lt;/h1&gt;
-    &lt;p&gt;Please enjoy your visit.&lt;/p&gt;
+    &lt;p class="content"&gt;Please enjoy your visit.&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
             </code></pre>
 
+            <!-- So neat that this kinda works -->
             <div class="fragment current-visible callout" style="top: 36%">doctype: Tells the browsers to adhere to standards</div>
             <div class="fragment current-visible callout" style="top: 40%">Starts the document</div>
             <div class="fragment current-visible callout" style="top: 45%">Metadata of a sort</div>
             <div class="fragment current-visible callout" style="top: 49%">Defines character set</div>
             <div class="fragment current-visible callout" style="top: 54%">Title of the page</div>
             <div class="fragment current-visible callout" style="top: 63%">The main body of content</div>
-            <div class="fragment current-visible callout" style="top: 77%">Note that most opening tags have a closing tag</div>
+            <div class="fragment current-visible callout" style="top: 77%">Don't forget to close tags!</div>
           </section>
 
         </section>
