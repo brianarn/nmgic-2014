@@ -89,9 +89,13 @@
             </ul>
           </section>
 
+        </section>
+
+        <section>
+
           <section>
-            <h2>HTML</h2>
-            <h3>The basis of everything</h3>
+            <h1>HTML</h1>
+            <h2>The basis of everything</h2>
           </section>
 
           <section>
@@ -138,7 +142,6 @@
               <li>The opening <code>&lt;html&gt;</code> tag</li>
               <li>A <code>&lt;head&gt;</code> tag, containing information about the page</li>
               <li>A <code>&lt;body&gt;</code> tag, holding the page's content</li>
-              <li>Usually (but not always) multiple tags in the body</li>
             </ul>
           </section>
 
@@ -153,19 +156,124 @@
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Welcome to my page!&lt;/h1&gt;
-    &lt;p class="content"&gt;Please enjoy your visit.&lt;/p&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;p&gt;Please enjoy your visit.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/body&gt;
 &lt;/html&gt;
             </code></pre>
 
             <!-- So neat that this kinda works -->
-            <div class="fragment current-visible callout" style="top: 36%">doctype: Tells the browsers to adhere to standards</div>
-            <div class="fragment current-visible callout" style="top: 40%">Starts the document</div>
-            <div class="fragment current-visible callout" style="top: 45%">Metadata of a sort</div>
-            <div class="fragment current-visible callout" style="top: 49%">Defines character set</div>
-            <div class="fragment current-visible callout" style="top: 54%">Title of the page</div>
-            <div class="fragment current-visible callout" style="top: 63%">The main body of content</div>
+            <div class="fragment current-visible callout" style="top: 33%">doctype: Tells the browsers to adhere to standards</div>
+            <div class="fragment current-visible callout" style="top: 37%">Starts the document</div>
+            <div class="fragment current-visible callout" style="top: 41%">Metadata of a sort</div>
+            <div class="fragment current-visible callout" style="top: 45%">Defines character set</div>
+            <div class="fragment current-visible callout" style="top: 49%">Title of the page</div>
+            <div class="fragment current-visible callout" style="top: 58%">The main body of content</div>
+            <div class="fragment current-visible callout" style="top: 66%">A <code>div</code> with an attribute</div>
             <div class="fragment current-visible callout" style="top: 77%">Don't forget to close tags!</div>
+          </section>
+
+          <section>
+            <h2>So many HTML tags</h2>
+            <p>There are a LOT of HTML tags in existence.</p>
+            <p>Many tags have some semantic meaning beyond just simply displaying content.</p>
+            <p>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tend to be useful catchalls when you don't have a more semantically meaningful tag.</p>
+          </section>
+
+          <section>
+            <h2>Tags vs Elements</h2>
+            <p>Sometimes you'll hear people discuss tags and elements. The distinction is simple, but important:</p>
+            <p>A Tag is the specific markup that wraps your content <br>( <code>&lt;p&gt;</code> )</p>
+            <p>An Element is the full composition of tags and content <br>( <code>&lt;p&gt;Hi there&lt;/p&gt;</code>)
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h1>CSS</h1>
+            <h2>Glossing things up</h2>
+          </section>
+
+          <section>
+            <h2>What is CSS?</h2>
+            <p>CSS stands for Cascading Style Sheets</p>
+            <p>Composed of selectors and declarations</p>
+          </section>
+
+          <section>
+            <h2>What does cascade mean?</h2>
+            <p>When two or more rules apply to the same element, the cascade determines which rule wins.</p>
+            <p>Selectors have a concept of weight - more-specific selectors (often called heavier) will win over less-specific (lighter) selectors.</p>
+            <p>If two selectors have equal weight, the latter selector wins.</p>
+          </section>
+
+          <section>
+            <h2>What is a selector?</h2>
+            <p>A selector is a description of an element</p>
+            <p>Typically composed of tag names, classes, and IDs</p>
+          </section>
+
+          <section>
+            <h2>Selecting tags, classes, and IDs</h2>
+            <ul>
+              <li>Tags: Just use name directly ( <code>h1</code> )</li>
+              <li>Classes: The class name, prefixed with a period <br> ( <code>.container</code> )</li>
+              <li>IDs: Use the ID value, prefixed with a pound sign <br> ( <code>#item</code> )</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Selectors in Action</h2>
+            <pre><code>
+  &lt;h1&gt;Welcome to my page!&lt;/h1&gt;
+
+  &lt;p id="visitor-count"&gt;You are the 829415th visitor!&lt;/p&gt;
+
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p&gt;Please enjoy your visit.&lt;/p&gt;
+  &lt;/div&gt;
+            </code></pre>
+            <pre><code class="css">
+  h1 { /* The "Welcome to my page" header */ }
+  .container { /* The `div` with class="container" */ }
+  #visitor-count { /* The element with id="visitor-count" */ }
+  p { /* All paragraphs */ }
+  .container p { /* The paragraphs specifically within the container div */ }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>CSS Declarations</h2>
+            <p>Start and end with curly braces ( <code>{ }</code> )
+            <p>Consist of one or more name/value properties that define the visual appearance of the selected element.</p>
+          </section>
+
+          <section>
+            <h2>CSS Declarations</h2>
+            <pre><code>
+  &lt;h1&gt;Welcome to my page!&lt;/h1&gt;
+
+  &lt;p id="visitor-count"&gt;You are the 829415th visitor!&lt;/p&gt;
+
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p&gt;Please enjoy your visit.&lt;/p&gt;
+  &lt;/div&gt;
+            </code></pre>
+            <pre><code class="css">
+  #visitor-count {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .container p {
+    color: green;
+  }
+  p {
+    color: blue;
+  }
+            </code></pre>
           </section>
 
         </section>
