@@ -188,6 +188,10 @@
             <p>An Element is the full composition of tags and content <br>( <code>&lt;p&gt;Hi there&lt;/p&gt;</code>)
           </section>
 
+          <section>
+            <h2>Questions on HTML?</h2>
+          </section>
+
         </section>
 
         <section>
@@ -276,13 +280,145 @@
     color: blue;
   }
             </code></pre>
-            <div class="fragment current-visible highlightline" style="top: 58%">ID selector</div>
-            <div class="fragment current-visible highlightline" style="top: 62%; padding-top: 1%;">Rules</div>
-            <div class="fragment current-visible highlightline" style="top: 71%">Combination selector, using a class and a tag</div>
-            <div class="fragment current-visible highlightline" style="top: 81%">Tag selector</div>
+            <div class="fragment current-visible highlightline" style="top: 61%">ID selector</div>
+            <div class="fragment current-visible highlightline" style="top: 65%; padding-top: 1%;">Rules</div>
+            <div class="fragment current-visible highlightline" style="top: 73%">Combination selector, using a class and a tag</div>
+            <div class="fragment current-visible highlightline" style="top: 82%">Tag selector</div>
+          </section>
+
+          <section>
+            <h2>How do I use CSS?</h2>
+            <p>Two approaches:</p>
+            <ul>
+              <li>Directly in your HTML, within a <code>style</code> tag.</li>
+              <li>Written in an external file, and referenced by a <code>link</code> tag in your page's <code>head</code> element.</li>
+            </ul>
+            <p>In general, unless the CSS really is just for one single page, it's recommended that you put it in an external file.</p>
+          </section>
+
+          <section>
+            <h2>Questions on CSS?</h2>
           </section>
 
         </section>
+
+        <section>
+
+          <section>
+            <h1>JavaScript</h1>
+            <h2>Bringing the page to life</h2>
+          </section>
+
+          <section>
+            <h2>What is JavaScript?</h2>
+            <p>A programming language created in ten days in the 90s.</p>
+            <p>The defacto programming language for running in a browser.</p>
+            <p>Originally considered a toy language, now runs in arguably more environments than any other programming language to date. Your phone probably has a JavaScript interpreter.</p>
+          </section>
+
+          <section>
+            <h2>Okay, but what does it do?</h2>
+            <p>Javascript (JS) basically lets you write and execute code on a page that changes the document structure, and possibly some level of presentation.</p>
+            <p>Provides the ability to make dynamic requests from a server, in order to inject more dynamic content into your document.</p>
+            <p>Can be used to create a wide variety of user experiences, including events and animations.</p>
+          </section>
+
+          <section>
+            <h2>How do I use JavaScript?</h2>
+            <p>Like with CSS, two approaches:</p>
+            <ul>
+              <li>Directly in your HTML, within <code>script</code> tags.</li>
+              <li>Written in an external file, referenced by a <code>script</code> with a <code>src</code> attribute that provides the file's location.</li>
+            </ul>
+            <p>Also like with CSS, in general, unless the JS really is just for one single page, it's recommended that you put it in an external file.</p>
+          </section>
+
+          <section>
+            <h2>Simple JS Example</h2>
+            <p><a href="http://jsbin.com/kitut/1/edit" target="_blank">See it in action</a></p>
+            <pre><code class="javascript">
+  &lt;button id=&quot;clickme&quot;&gt;Click Me!&lt;/button&gt;
+            </code></pre>
+            <pre><code>
+  // This works in most newer browsers, but will fail in IE6-8
+  document.getElementById('clickme').addEventListener('click', function (e) {
+    alert('You clicked the button!');
+  }, false);
+            </code></pre>
+            <div class="fragment">Ew.</div>
+          </section>
+
+          <section>
+            <h2>Some parts of JS are heavy/gross</h2>
+            <p>In particular, working with the document can feel heavy and cumbersome.</p>
+            <p>There are better / easier ways!</p>
+            <ul>
+              <li><a href="http://jquery.com/" target="_blank">jQuery</a> - a Swiss Army Knife of sorts</li>
+              <li><a href="http://dojotoolkit.org" target="_blank">Dojo</a> - a fully stocked toolbox with anything you could ever need</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>What is jQuery?</h2>
+            <p>jQuery provides a simple way to get references to elements in your document, using CSS selectors.</p>
+            <p>Once you have some elements, it provides an easy-to-use set of methods to set up event handlers, change document structure, and more.</p>
+            <p>Also includes extra helpers to make things like <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> easier.</p>
+            <p>Roughly millions of plugins on the 'net to do almost anything you could want.</p>
+            <p>Fairly small, but quite powerful.</p>
+          </section>
+
+          <section>
+            <h2>Simple JS Example with jQuery</h2>
+            <p><a href="http://jsbin.com/tuxeq/1/edit" target="_blank">See it in action</a></p>
+            <pre><code>
+  &lt;!-- Same button --&gt;
+  &lt;button id=&quot;clickme&quot;&gt;Click Me!&lt;/button&gt;
+            </code></pre>
+            <pre><code class="javascript">
+  // No more cross-browser concerns here! jQuery takes care of that.
+  $('#clickme').on('click', function (e) {
+    alert('You clicked the button!');
+  });
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>What is Dojo?</h2>
+            <p>The Dojo Toolkit is a large library of code that includes dozens of modules of code to make web application development easier.</p>
+            <p>While it contains a TON of code, you only load and use the pieces you want, when you want them.</p>
+            <p>Somewhat steeper learning curve, but it includes a lot more functionality out-of-the-box.</p>
+          </section>
+
+          <section>
+            <h2>Simple JS Example with Dojo</h2>
+            <p><a href="http://jsbin.com/daquf/1/edit" target="_blank">See it in action</a></p>
+            <pre><code>
+  &lt;!-- Same button --&gt;
+  &lt;button id=&quot;clickme&quot;&gt;Click Me!&lt;/button&gt;
+            </code></pre>
+            <pre><code class="javascript">
+  // No more cross-browser concerns here either.
+  // Dojo is a bit more complex than jQuery, though.
+  require(['dojo/query'], function (query) {
+    query('#clickme').on('click', function (e) {
+      alert('You clicked the button!');
+    });
+  });
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Using the right tool for the job</h2>
+            <p>There is no one right tool for everything in JS.</p>
+            <p>That being said, use <em>something</em> beyond just plain JS, until you really know what you're doing, and even then, still use something.</p>
+          </section>
+
+          <section>
+            <h2>Questions on JavaScript?</h2>
+          </section>
+
+        </section>
+
 
       </div><!--/.slides-->
 
@@ -313,6 +449,8 @@
 
         width: 960, // default: 960
         height: 700, // default: 700
+
+        slideNumber: true,
 
         theme: 'sky',
         transition: 'linear',
